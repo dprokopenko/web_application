@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Question {{ question.id }}</title>
+</head>
+<body>
+    <h1>{{ question.title }}</h1>
+    <p>{{ question.text }}</p>
+    <ol>
+        {% for answer in question.answer_set.all %}
+            <li>{{ answer.text }}</li>
+        {% endfor %}
+    </ol>
+</body>
+</html>

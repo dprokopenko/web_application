@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Popular Questions Page: {{ page.number }}</title>
+</head>
+<body>
+        {% for question in page.object_list %}
+            <li><a href="{% url 'page-question' question.id %}">{{ question.title }}</a></li>
+        {% endfor %}
+</body>
+</html>
