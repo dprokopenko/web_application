@@ -7,6 +7,13 @@
 <body>
     <h1>{{ question.title }}</h1>
     <p>{{ question.text }}</p>
+    <form action="" method="post">
+        {% csrf_token %}
+        <table>
+            {{ form }}
+        </table>
+        <input type="submit" value="Отправить">
+    </form>
     <ol>
         {% for answer in question.answer_set.all %}
             <li>{{ answer.text }}</li>
